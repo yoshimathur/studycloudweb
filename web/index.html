@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Study Cloud web app.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="study_cloud">
+  <link rel="apple-touch-icon" href="icons/studycloudlogo.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="SCFavicon.png"/>
+
+  <title>study_cloud</title>
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="google-site-verification" content="Uc8H75tHEbXWUbx6yS7zJGsxcZzhzcFdGLmg1XE_W_Q" />
+
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAh3In22ADdLHU9xrMoJcn1yGEE7d-tzMs",
+    authDomain: "tutorhub-d7387.firebaseapp.com",
+    databaseURL: "https://tutorhub-d7387.firebaseio.com",
+    projectId: "tutorhub-d7387",
+    storageBucket: "tutorhub-d7387.appspot.com",
+    messagingSenderId: "824463326905",
+    appId: "1:824463326905:web:174f0e5ef77b3e6691e568",
+    measurementId: "G-RG22MK9JXG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
